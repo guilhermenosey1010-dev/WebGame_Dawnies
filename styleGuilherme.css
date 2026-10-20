@@ -16,11 +16,17 @@ background-color: white;
     width: 80%;
 
 }
+section{
+    background-color: red;
+    color: white;
+    width: 80%;
+    height: 200px;
+}
 .navegacion{
     display: flex;
     flex-direction: row;
 }
-.navegacion p{
+.navegacion li{
     display: flex;
     justify-content: center;
     background-color: grey;
@@ -29,11 +35,15 @@ background-color: white;
     width: 50%;
     text-align: left;
 }
-.navegacion li{
-    display: flex;
+
+
+
+.barraNav li{
+  display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+
 
 .navegacion img{
     width: 15%;
