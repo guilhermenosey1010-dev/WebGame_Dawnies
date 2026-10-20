@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo de juegos | GAME</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="catalogo.css">
+</head>
+<body>
+  <header class="cabecera">
+    <a class="marca" href="#">GAME <span>JUEGOS</span></a>
+    <nav aria-label="Navegación principal">
+      <a href="#categorias">Categorías</a>
+      <span>Ofertas</span>
+      <span>Cesta</span>
+    </nav>
+    <span class="avatar" aria-hidden="true">C</span>
+  </header>
+
+  <main>
+    <section class="catalogo" id="catalogo" aria-labelledby="titulo-catalogo">
+      <aside class="filtros" id="categorias">
+        <h2>Filtros</h2>
+        <a class="seleccionado" data-filtro="todos" href="#todos"><span>Todos</span><small>128</small></a>
+        <a data-filtro="Acción" href="#accion"><span>Acción</span><small>34</small></a>
+        <a data-filtro="Aventura" href="#aventura"><span>Aventura</span><small>28</small></a>
+        <a data-filtro="Deportes" href="#deportes"><span>Deportes</span><small>19</small></a>
+      </aside>
+
+      <div class="juegos" id="todos">
+        <div class="titulo-seccion">
+          <h1 id="titulo-catalogo">Juegos destacados</h1>
+          <a href="#todos">Ver todos <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="rejilla">
+          <article class="tarjeta" data-categoria="Acción">
+            <div class="imagen paisaje" role="img" aria-label="Ilustración de montañas al amanecer"><span>Imagen</span></div>
+            <h2>The Last Hope</h2><p class="plataforma">PS5 · PC</p><p class="precio">59,99 €</p>
+            <a class="boton" href="#todos">Ver ficha</a>
+          </article>
+          <article class="tarjeta" data-categoria="Acción">
+            <div class="imagen neon" role="img" aria-label="Ilustración de luces de neón"><span>Imagen</span></div>
+            <h2>Neon Runners</h2><p class="plataforma">Xbox · PC</p><p class="precio">49,99 €</p>
+            <a class="boton" href="#todos">Ver ficha</a>
+          </article>
+          <article class="tarjeta" data-categoria="Aventura">
+            <div class="imagen bosque" role="img" aria-label="Ilustración de un bosque"><span>Imagen</span></div>
+            <h2>Wild Forest</h2><p class="plataforma">Nintendo Switch</p><p class="precio">44,99 €</p>
+            <a class="boton" href="#todos">Ver ficha</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+<script>
+  const opciones = document.querySelectorAll("[data-filtro]");
+  const juegos = document.querySelectorAll(".tarjeta");
+  opciones.forEach(opcion => opcion.addEventListener("click", evento => {
+    evento.preventDefault();
+    const filtro = opcion.dataset.filtro;
+    opciones.forEach(item => item.classList.remove("seleccionado"));
+    opcion.classList.add("seleccionado");
+    juegos.forEach(juego => { juego.hidden = filtro !== "todos" && juego.dataset.categoria !== filtro; });
+  }));
+</script></body>
+</html>
+
+
+
+
