@@ -1,2 +1,2 @@
 # WebGame_Dawnies
-Grupo de guilherme, Luka, Johnattan y Oier
+Grupo de Guilherme, Luka, Johnattan y Oier
