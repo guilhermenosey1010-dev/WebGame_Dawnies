@@ -87,3 +87,164 @@ header {
     border-bottom: 3px solid #b00089;
     color: #b00089;
 }
+
+/* Banner de novedades */
+main {
+    padding-top: 24px;
+    padding-bottom: 16px;
+}
+
+.cajaPartida {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 20px 28px;
+    border-radius: 8px;
+    background: #fbeaf7;
+}
+
+.etiqueta {
+    margin: 0 0 12px;
+    color: #b00089;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+h1 {
+    margin: 0 0 12px;
+    font-size: 34px;
+    line-height: 1.15;
+}
+
+h1 span {
+    color: #b00089;
+}
+
+.boton {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 4px;
+    color: white;
+    background: #b00089;
+    font-size: 14px;
+}
+
+.boton:hover {
+    color: white;
+    background: #89006b;
+}
+
+.cajaPartida img {
+    width: 37%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Categorías y productos */
+.categorias,
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.categorias {
+    margin: 16px 0;
+    color: #b00089;
+    font-size: 14px;
+}
+
+.categorias a,
+.categorias > span {
+    padding: 10px 18px;
+    border: 1px solid #e3e3ec;
+    border-radius: 5px;
+    background: white;
+}
+
+.categorias a:hover {
+    background: #fbeaf7;
+}
+
+.titulo-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.titulo-seccion a {
+    color: #b00089;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.tarjeta {
+    padding: 10px;
+    border: 1px solid #e3e3ec;
+    border-radius: 7px;
+    background: white;
+}
+
+.tarjeta img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 8 / 3;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.tarjeta h3 {
+    margin: 12px 0 6px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.plataforma {
+    margin: 0;
+    color: #76767e;
+    font-size: 13px;
+}
+
+.precio {
+    margin: 6px 0 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Pie de página */
+footer {
+    background: white;
+}
+
+.pie {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    min-height: 56px;
+}
+
+.pie .marca {
+    font-size: 18px;
+}
+
+.informacion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 12px;
+}
+
+.pie small {
+    margin-left: auto;
+    white-space: nowrap;
+    font-size: 12px;
+}

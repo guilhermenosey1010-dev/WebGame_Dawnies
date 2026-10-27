@@ -23,24 +23,60 @@
             </div>
         </nav>
     </header>
-    <section>
-        <div class="cajaPartida">
-            <div>
-                <h1>Tu Próxima partida </h1>
-                    <h1>empieza aqui</h1>
-                <div>
-                        <a href="">Ver Productor</a>
-                </div>
+    <main class="contenedor">
+        <section class="cajaPartida" aria-labelledby="titulo-inicio">
+            <div class="presentacion">
+                <p class="etiqueta">ÚLTIMAS NOVEDADES</p>
+                <h1 id="titulo-inicio">Tu próxima partida<br><span>empieza aquí.</span></h1>
+                <a class="boton" href="catalogo.html">Ver novedades</a>
             </div>
-            <div class="imgPlace">
-                <img src="https://media.istockphoto.com/id/1980276924/es/vector/sin-elemento-gr%C3%A1fico-en-miniatura-de-la-foto-no-se-ha-encontrado-ninguna-imagen-o-est%C3%A1.jpg?s=612x612&w=0&k=20&c=artWlQoi5R1edWQBv9LfzeLXupOcH_alZnMgvXdYkF4=" alt="">
+            <img src="imagenes/nova-quest-banner.svg" alt="Nova Quest: montañas violetas bajo una luna rosa" width="300" height="156">
+        </section>
+
+        <nav class="categorias" aria-label="Categorías de productos">
+            <a href="catalogo.html">Videojuegos</a>
+            <span>Consolas</span>
+            <span>Accesorios</span>
+        </nav>
+
+        <section aria-labelledby="titulo-destacados">
+            <div class="titulo-seccion">
+                <h2 id="titulo-destacados">Destacados y ofertas</h2>
+                <a href="catalogo.html">Ver todo <span aria-hidden="true">→</span></a>
             </div>
+            <div class="productos">
+                <article class="tarjeta">
+                    <img src="imagenes/nova-quest.svg" alt="" width="300" height="112">
+                    <h3>Nova Quest</h3>
+                    <p class="plataforma">PS5</p>
+                    <p class="precio">59,99 €</p>
+                </article>
+                <article class="tarjeta">
+                    <img src="imagenes/wild-forest.svg" alt="" width="300" height="112">
+                    <h3>Wild Forest</h3>
+                    <p class="plataforma">Nintendo Switch</p>
+                    <p class="precio">44,99 €</p>
+                </article>
+                <article class="tarjeta">
+                    <img src="imagenes/neon-run.svg" alt="" width="300" height="112">
+                    <h3>Neon Run</h3>
+                    <p class="plataforma">PC</p>
+                    <p class="precio">39,99 €</p>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="pie contenedor">
+            <a class="marca" href="index.html">GAME</a>
+            <div class="informacion">
+                <span>Ayuda</span>
+                <span>Contacto</span>
+                <span>Envíos</span>
+                <span>Privacidad</span>
+            </div>
+            <small>© GAME 2026</small>
         </div>
-    </section>
-  
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, dolore necessitatibus quaerat enim quibusdam ducimus nulla numquam consectetur aliquid accusamus officiis esse nisi, quasi nemo assumenda vel modi odit eaque!</p>
-<footer>
-Todos los derechos reservados a luki luh
-</footer>        
+    </footer>
 </body>
 </html>
