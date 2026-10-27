@@ -248,3 +248,144 @@ footer {
     white-space: nowrap;
     font-size: 12px;
 }
+
+/* Pantallas pequeñas */
+@media (max-width: 650px) {
+    .contenedor {
+        width: calc(100% - 30px);
+    }
+
+    .navegacion {
+        gap: 20px;
+        min-height: 60px;
+    }
+
+    .marca {
+        font-size: 28px;
+    }
+
+    #buscar {
+        padding: 10px;
+        font-size: 11px;
+    }
+
+    .cuenta,
+    .cesta {
+        font-size: 10px;
+    }
+
+    .barraNav a,
+    .barraNav span {
+        padding: 10px 0;
+        font-size: 12px;
+    }
+
+    main {
+        padding-top: 16px;
+    }
+
+    .cajaPartida {
+        gap: 12px;
+        padding: 16px 20px;
+    }
+
+    .etiqueta {
+        margin-bottom: 8px;
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .boton {
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+
+    .categorias,
+    .productos {
+        gap: 10px;
+    }
+
+    .categorias a,
+    .categorias > span {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .titulo-seccion a {
+        font-size: 11px;
+    }
+
+    .tarjeta {
+        padding: 8px;
+    }
+
+    .tarjeta h3 {
+        margin: 8px 0 4px;
+        font-size: 13px;
+    }
+
+    .plataforma {
+        font-size: 11px;
+    }
+
+    .precio {
+        font-size: 20px;
+    }
+
+    .pie {
+        gap: 20px;
+    }
+
+    .informacion,
+    .pie small {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 420px) {
+    .navegacion {
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 14px 0;
+    }
+
+    .navegacion .marca {
+        margin-right: auto;
+    }
+
+    #buscar {
+        order: 1;
+        flex-basis: 100%;
+    }
+
+    .cajaPartida {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cajaPartida img {
+        width: 100%;
+    }
+
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .pie {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 16px 0;
+    }
+
+    .informacion {
+        order: 1;
+        width: 100%;
+    }
+}
