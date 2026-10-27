@@ -20,7 +20,7 @@ section{
     background-color: red;
     color: white;
     width: 80%;
-    height: 200px;
+    height: auto;
 }
 .navegacion{
     display: flex;
@@ -48,4 +48,16 @@ section{
 .navegacion img{
     width: 15%;
     border-radius: 40px;
+}
+
+.cajaPartida{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:en;
+}
+
+.imgPlace img{
+width: 30%;
+height: auto;
 }
