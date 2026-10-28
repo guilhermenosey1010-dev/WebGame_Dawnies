@@ -1,6 +1,6 @@
 const products = Array.from(document.querySelectorAll(".product"));
 const categories = Array.from(document.querySelectorAll(".category"));
-const search = document.getElementById("search");
+const search = document.getElementById("buscar");
 const availability = document.getElementById("availability");
 const platforms = Array.from(
   document.querySelectorAll('.filters input[type="checkbox"]'),

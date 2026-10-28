@@ -1,0 +1,128 @@
+/* Cabecera compartida por todas las páginas, basada en Inicio e Inventario. */
+.cabecera {
+    flex-shrink: 0;
+    color: #595b60;
+    background: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: normal;
+}
+
+.cabecera .contenedor {
+    width: calc(100% - 48px);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.cabecera .navegacion {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    min-height: 80px;
+}
+
+.cabecera a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.cabecera a:hover {
+    color: #b00089;
+}
+
+.cabecera a:focus-visible,
+.cabecera input:focus-visible {
+    outline: 2px solid #b00089;
+    outline-offset: 4px;
+}
+
+.cabecera .marca {
+    color: #b00089;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.cabecera #buscar {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 16px;
+    border: 0;
+    border-radius: 5px;
+    background: #f7f7fa;
+    color: inherit;
+    font: inherit;
+    font-size: 13px;
+}
+
+.cabecera .cuenta,
+.cabecera .cesta {
+    white-space: nowrap;
+    font-size: 13px;
+}
+
+.cabecera .barraNav {
+    border-top: 1px solid #eeeef4;
+    border-bottom: 1px solid #e3e3ec;
+}
+
+.cabecera .barraNav .contenedor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cabecera .barraNav a {
+    padding: 14px 0;
+    font-size: 14px;
+}
+
+.cabecera .barraNav [aria-current="page"] {
+    border-bottom: 3px solid #b00089;
+    color: #b00089;
+}
+
+@media (max-width: 650px) {
+    .cabecera .contenedor {
+        width: calc(100% - 30px);
+    }
+
+    .cabecera .navegacion {
+        gap: 20px;
+        min-height: 60px;
+    }
+
+    .cabecera .marca {
+        font-size: 28px;
+    }
+
+    .cabecera #buscar {
+        padding: 10px;
+        font-size: 11px;
+    }
+
+    .cabecera .cuenta,
+    .cabecera .cesta {
+        font-size: 10px;
+    }
+
+    .cabecera .barraNav a {
+        padding: 10px 0;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 420px) {
+    .cabecera .navegacion {
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 14px 0;
+    }
+
+    .cabecera .navegacion .marca {
+        margin-right: auto;
+    }
+
+    .cabecera #buscar {
+        order: 1;
+        flex-basis: 100%;
+    }
+}

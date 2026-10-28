@@ -15,7 +15,8 @@ WebGame_Dawnies/
 │   ├── inicio.css
 │   ├── catalogo.css
 │   ├── inventario.css
-│   └── alta.css
+│   ├── alta.css
+│   └── header.css       Cabecera común de las cuatro páginas
 ├── js/
 │   └── catalogo.js      Búsqueda y filtros del catálogo
 ├── .gitignore
@@ -24,6 +25,7 @@ WebGame_Dawnies/
 
 Los HTML se mantienen juntos para que los enlaces entre páginas sean sencillos.
 Cada página tiene su propia hoja de estilos en `css/` y los scripts van en `js/`.
+La cabecera usa `css/header.css` en todas las páginas para mantener el mismo diseño.
 
 ## Abrir la web
 

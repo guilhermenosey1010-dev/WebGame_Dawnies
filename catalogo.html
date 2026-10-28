@@ -16,32 +16,23 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/catalogo.css" />
+    <link rel="stylesheet" href="css/header.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="header-main">
-        <a class="logo" href="index.html" aria-label="GAME, inicio">GAME</a>
-        <label class="search">
-          <svg viewBox="0 0 20 20" aria-hidden="true">
-            <circle cx="8.5" cy="8.5" r="5.5" />
-            <path d="m13 13 4 4" />
-          </svg>
-          <span class="sr-only">Buscar productos</span>
-          <input
-            id="search"
-            type="search"
-            placeholder="Buscar productos..."
-            autocomplete="off"
-          />
-        </label>
-        <a class="account" href="#cuenta">Mi cuenta</a>
-        <a class="cart" href="#cesta">Cesta <span>(0)</span></a>
+    <header class="cabecera">
+      <div class="navegacion contenedor">
+        <a class="marca" href="index.html" aria-label="GAME, inicio">GAME</a>
+        <input id="buscar" type="search" placeholder="Buscar productos..." aria-label="Buscar productos">
+        <span class="cuenta">Mi cuenta</span>
+        <span class="cesta">Cesta (0)</span>
       </div>
-      <nav class="navigation" aria-label="Navegación principal">
-        <a href="index.html">Inicio</a>
-        <a class="active" href="catalogo.html" aria-current="page">Catálogo</a>
-        <a href="inventario.html">Inventario</a>
-        <a href="alta.html">Alta de producto</a>
+      <nav class="barraNav" aria-label="Navegación principal">
+        <div class="contenedor">
+          <a href="index.html">Inicio</a>
+          <a href="catalogo.html" aria-current="page">Catálogo</a>
+          <a href="inventario.html">Inventario</a>
+          <a href="alta.html">Alta de producto</a>
+        </div>
       </nav>
     </header>
 

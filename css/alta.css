@@ -21,82 +21,6 @@ body.pagina-alta {
     margin: 0 auto;
 }
 
-/* CABECERA */
-
-.pagina-alta header {
-    background-color: #ffffff;
-}
-
-.pagina-alta .navegacion {
-    min-height: 106px;
-    display: flex;
-    align-items: center;
-    gap: 35px;
-}
-
-.pagina-alta .marca {
-    color: #ad008d;
-    font-size: 43px;
-    font-weight: bold;
-    text-decoration: none;
-    letter-spacing: -2px;
-}
-
-.pagina-alta #buscar {
-    flex: 1;
-    min-width: 80px;
-    height: 38px;
-    margin-left: 25px;
-    padding: 0 18px;
-    border: none;
-    border-radius: 8px;
-    background-color: #f6f6f8;
-    color: #595d60;
-    font-family: inherit;
-    font-size: 15px;
-}
-
-.pagina-alta .cuenta,
-.pagina-alta .cesta {
-    white-space: nowrap;
-    font-size: 14px;
-}
-
-/* MENU DE NAVEGACION */
-
-.pagina-alta .barraNav {
-    background-color: #ffffff;
-    border-top: 1px solid #e2e3eb;
-    border-bottom: 1px solid #e2e3eb;
-}
-
-.pagina-alta .barraNav .contenedor {
-    min-height: 45px;
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-}
-
-.pagina-alta .barraNav a,
-.pagina-alta .barraNav span {
-    display: flex;
-    align-items: center;
-    padding: 0 0;
-    border-bottom: 4px solid transparent;
-    color: #595d60;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.pagina-alta .barraNav a:hover {
-    color: #ad008d;
-}
-
-.pagina-alta .barraNav .activa {
-    color: #ad008d;
-    border-bottom-color: #ad008d;
-}
-
 /* CONTENIDO PRINCIPAL */
 
 .pagina-alta .contenido-alta {
@@ -243,6 +167,9 @@ body.pagina-alta {
 }
 
 .pagina-alta .pie .marca {
+    color: #ad008d;
+    font-weight: bold;
+    text-decoration: none;
     font-size: 20px;
     letter-spacing: -1px;
 }
@@ -263,34 +190,6 @@ body.pagina-alta {
 @media (max-width: 650px) {
     .pagina-alta .contenedor {
         width: calc(100% - 30px);
-    }
-
-    .pagina-alta .navegacion {
-        min-height: 85px;
-        flex-wrap: wrap;
-        gap: 12px;
-        padding: 12px 0;
-    }
-
-    .pagina-alta .marca {
-        font-size: 34px;
-    }
-
-    .pagina-alta #buscar {
-        order: 3;
-        flex-basis: 100%;
-        margin-left: 0;
-    }
-
-    .pagina-alta .barraNav .contenedor {
-        gap: 20px;
-        overflow-x: auto;
-    }
-
-    .pagina-alta .barraNav a,
-    .pagina-alta .barraNav span {
-        flex-shrink: 0;
-        font-size: 13px;
     }
 
     .pagina-alta .contenido-alta h1 {
