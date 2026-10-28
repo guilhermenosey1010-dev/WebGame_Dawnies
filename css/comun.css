@@ -1,0 +1,289 @@
+/* Diseño compartido, tomado de la página de Inicio. */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #595b60;
+    background: #f7f7fa;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #b00089;
+}
+
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid #b00089;
+    outline-offset: 4px;
+}
+
+.contenedor {
+    width: calc(100% - 48px);
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Títulos y botones */
+main {
+    padding-top: 24px;
+    padding-bottom: 16px;
+}
+
+.etiqueta {
+    margin: 0 0 12px;
+    color: #b00089;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+h1 {
+    margin: 0 0 12px;
+    font-size: 34px;
+    line-height: 1.15;
+}
+
+h1 span {
+    color: #b00089;
+}
+
+.boton {
+    display: inline-block;
+    padding: 12px 18px;
+    border: 0;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 4px;
+    color: white;
+    background: #b00089;
+    font-size: 14px;
+}
+
+.boton:hover {
+    color: white;
+    background: #89006b;
+}
+
+/* Categorías y productos */
+.categorias,
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.categorias {
+    margin: 16px 0;
+    color: #b00089;
+    font-size: 14px;
+}
+
+.categorias a,
+.categorias > span,
+.categorias button {
+    padding: 10px 18px;
+    border: 1px solid #e3e3ec;
+    border-radius: 5px;
+    background: white;
+}
+
+.categorias a:hover,
+.categorias button:hover,
+.categorias button[aria-pressed="true"] {
+    background: #fbeaf7;
+}
+
+.titulo-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.titulo-seccion a {
+    color: #b00089;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.tarjeta {
+    padding: 10px;
+    border: 1px solid #e3e3ec;
+    border-radius: 7px;
+    background: white;
+}
+
+.tarjeta img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 8 / 3;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.tarjeta h3 {
+    margin: 12px 0 6px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.plataforma {
+    margin: 0;
+    color: #76767e;
+    font-size: 13px;
+}
+
+.precio {
+    margin: 6px 0 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Pie de página */
+footer {
+    background: white;
+}
+
+.pie {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    min-height: 56px;
+}
+
+.pie .marca {
+    color: #b00089;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.informacion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 12px;
+}
+
+.pie small {
+    margin-left: auto;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 650px) {
+    .contenedor {
+        width: calc(100% - 30px);
+    }
+
+    main {
+        padding-top: 16px;
+    }
+
+.etiqueta {
+        margin-bottom: 8px;
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .boton {
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+
+    .categorias,
+    .productos {
+        gap: 10px;
+    }
+
+    .categorias a,
+    .categorias > span {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .titulo-seccion a {
+        font-size: 11px;
+    }
+
+    .tarjeta {
+        padding: 8px;
+    }
+
+    .tarjeta h3 {
+        margin: 8px 0 4px;
+        font-size: 13px;
+    }
+
+    .plataforma {
+        font-size: 11px;
+    }
+
+    .precio {
+        font-size: 20px;
+    }
+
+    .pie {
+        gap: 20px;
+    }
+
+    .informacion,
+    .pie small {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 420px) {
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .pie {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 16px 0;
+    }
+
+    .informacion {
+        order: 1;
+        width: 100%;
+    }
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button:focus-visible,
+select:focus-visible {
+    outline: 2px solid #b00089;
+    outline-offset: 4px;
+}
+
+[hidden] {
+    display: none !important;
+}

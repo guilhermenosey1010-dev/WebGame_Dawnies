@@ -12,6 +12,7 @@ WebGame_Dawnies/
 ├── inventario.html     Inventario
 ├── alta.html           Formulario de alta de producto
 ├── css/
+│   ├── comun.css        Colores, tarjetas, botones y pie de Inicio
 │   ├── inicio.css
 │   ├── catalogo.css
 │   ├── inventario.css
@@ -26,6 +27,7 @@ WebGame_Dawnies/
 Los HTML se mantienen juntos para que los enlaces entre páginas sean sencillos.
 Cada página tiene su propia hoja de estilos en `css/` y los scripts van en `js/`.
 La cabecera usa `css/header.css` en todas las páginas para mantener el mismo diseño.
+Los elementos del diseño de Inicio se comparten a través de `css/comun.css`.
 
 ## Abrir la web
 
