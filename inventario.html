@@ -7,29 +7,23 @@
   <link rel="stylesheet" href="inventario.css">
 </head>
 <body>
-  <div class="page">
-    <header class="topbar">
-      <a class="brand" href="#" aria-label="GAME, inicio">GAME</a>
-
-      <div class="search" role="search">
-        <span class="search-icon" aria-hidden="true"></span>
-        <span>Buscar productos...</span>
+  <header>
+    <div class="navegacion contenedor">
+      <a class="marca" href="index.html" aria-label="GAME, inicio">GAME</a>
+      <input id="buscar" type="search" placeholder="Buscar productos..." aria-label="Buscar productos">
+      <span class="cuenta">Mi cuenta</span>
+      <span class="cesta">Cesta (0)</span>
+    </div>
+    <nav class="barraNav" aria-label="Navegación principal">
+      <div class="contenedor">
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="inventario.html" aria-current="page">Inventario</a>
+        <span aria-disabled="true" title="Próximamente">Alta de producto</span>
       </div>
-
-      <div class="account-links">
-        <span>Mi cuenta</span>
-        <span class="cart">Cesta <small>(0)</small></span>
-      </div>
-    </header>
-
-    <nav class="navigation" aria-label="Navegación principal">
-      <a href="#">Inicio</a>
-      <a href="#">Catálogo</a>
-      <a class="active" href="#" aria-current="page">Inventario</a>
-      <a href="#">Alta de productos</a>
     </nav>
-
-    <main class="content">
+  </header>
+  <main class="contenedor content">
       <div class="title-row">
         <h1>Inventario</h1>
         <button class="add-button" type="button">＋ Añadir producto</button>
@@ -64,7 +58,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr tabindex="0">
                 <td>G001</td>
                 <td>Nova Quest</td>
                 <td>Videojuegos</td>
@@ -72,7 +66,7 @@
                 <td>12</td>
                 <td>A-01</td>
               </tr>
-              <tr>
+              <tr tabindex="0">
                 <td>G002</td>
                 <td>Wild Forest</td>
                 <td>Videojuegos</td>
@@ -80,7 +74,7 @@
                 <td class="low-stock">3</td>
                 <td>A-02</td>
               </tr>
-              <tr>
+              <tr tabindex="0">
                 <td>G003</td>
                 <td>Neon Run</td>
                 <td>Videojuegos</td>
@@ -88,7 +82,7 @@
                 <td class="low-stock">0</td>
                 <td>A-03</td>
               </tr>
-              <tr>
+              <tr tabindex="0">
                 <td>C004</td>
                 <td>Consola PS5</td>
                 <td>Consolas</td>
@@ -96,7 +90,7 @@
                 <td>8</td>
                 <td>B-01</td>
               </tr>
-              <tr>
+              <tr tabindex="0">
                 <td>A005</td>
                 <td>Mando inalámbrico</td>
                 <td>Accesorios</td>
@@ -109,21 +103,25 @@
         </div>
         <div class="table-caption">
           <span>Mostrando 5 productos</span>
-          <span class="pagination" aria-label="Página 1">‹ &nbsp; <strong>1</strong> &nbsp; ›</span>
+          <nav class="pagination" aria-label="Paginación del inventario">
+            <button type="button" aria-label="Página anterior">‹</button>
+            <button class="current-page" type="button" aria-current="page" aria-label="Página 1">1</button>
+            <button type="button" aria-label="Página siguiente">›</button>
+          </nav>
         </div>
       </section>
-    </main>
-
-    <footer class="footer">
-      <a class="footer-brand" href="#">GAME</a>
-      <div class="footer-links">
-        <a href="#">Ayuda</a>
-        <a href="#">Contacto</a>
-        <a href="#">Envíos</a>
-        <a href="#">Privacidad</a>
+  </main>
+  <footer>
+    <div class="pie contenedor">
+      <a class="marca" href="index.html">GAME</a>
+      <div class="informacion">
+        <span>Ayuda</span>
+        <span>Contacto</span>
+        <span>Envíos</span>
+        <span>Privacidad</span>
       </div>
-      <span class="copyright">© GAME 2024</span>
-    </footer>
-  </div>
+      <small>© GAME 2026</small>
+    </div>
+  </footer>
 </body>
 </html>
