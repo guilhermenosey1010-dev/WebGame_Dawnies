@@ -1,0 +1,391 @@
+/* Base y cabecera */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #595b60;
+    background: #f7f7fa;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #b00089;
+}
+
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid #b00089;
+    outline-offset: 4px;
+}
+
+.contenedor {
+    width: calc(100% - 48px);
+    max-width: 1100px;
+    margin: auto;
+}
+
+header {
+    background: white;
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    min-height: 80px;
+}
+
+.marca {
+    color: #b00089;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#buscar {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 16px;
+    border: 0;
+    border-radius: 5px;
+    background: #f7f7fa;
+    color: inherit;
+    font: inherit;
+    font-size: 13px;
+}
+
+.cuenta,
+.cesta {
+    white-space: nowrap;
+    font-size: 13px;
+}
+
+.barraNav {
+    border-top: 1px solid #eeeef4;
+    border-bottom: 1px solid #e3e3ec;
+}
+
+.barraNav .contenedor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.barraNav a,
+.barraNav span {
+    padding: 14px 0;
+    font-size: 14px;
+}
+
+.barraNav [aria-current] {
+    border-bottom: 3px solid #b00089;
+    color: #b00089;
+}
+
+/* Banner de novedades */
+main {
+    padding-top: 24px;
+    padding-bottom: 16px;
+}
+
+.cajaPartida {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 20px 28px;
+    border-radius: 8px;
+    background: #fbeaf7;
+}
+
+.etiqueta {
+    margin: 0 0 12px;
+    color: #b00089;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+h1 {
+    margin: 0 0 12px;
+    font-size: 34px;
+    line-height: 1.15;
+}
+
+h1 span {
+    color: #b00089;
+}
+
+.boton {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 4px;
+    color: white;
+    background: #b00089;
+    font-size: 14px;
+}
+
+.boton:hover {
+    color: white;
+    background: #89006b;
+}
+
+.cajaPartida img {
+    width: 37%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Categorías y productos */
+.categorias,
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.categorias {
+    margin: 16px 0;
+    color: #b00089;
+    font-size: 14px;
+}
+
+.categorias a,
+.categorias > span {
+    padding: 10px 18px;
+    border: 1px solid #e3e3ec;
+    border-radius: 5px;
+    background: white;
+}
+
+.categorias a:hover {
+    background: #fbeaf7;
+}
+
+.titulo-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.titulo-seccion a {
+    color: #b00089;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.tarjeta {
+    padding: 10px;
+    border: 1px solid #e3e3ec;
+    border-radius: 7px;
+    background: white;
+}
+
+.tarjeta img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 8 / 3;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.tarjeta h3 {
+    margin: 12px 0 6px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.plataforma {
+    margin: 0;
+    color: #76767e;
+    font-size: 13px;
+}
+
+.precio {
+    margin: 6px 0 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Pie de página */
+footer {
+    background: white;
+}
+
+.pie {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    min-height: 56px;
+}
+
+.pie .marca {
+    font-size: 18px;
+}
+
+.informacion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 12px;
+}
+
+.pie small {
+    margin-left: auto;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 650px) {
+    .contenedor {
+        width: calc(100% - 30px);
+    }
+
+    .navegacion {
+        gap: 20px;
+        min-height: 60px;
+    }
+
+    .marca {
+        font-size: 28px;
+    }
+
+    #buscar {
+        padding: 10px;
+        font-size: 11px;
+    }
+
+    .cuenta,
+    .cesta {
+        font-size: 10px;
+    }
+
+    .barraNav a,
+    .barraNav span {
+        padding: 10px 0;
+        font-size: 12px;
+    }
+
+    main {
+        padding-top: 16px;
+    }
+
+    .cajaPartida {
+        gap: 12px;
+        padding: 16px 20px;
+    }
+
+    .etiqueta {
+        margin-bottom: 8px;
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .boton {
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+
+    .categorias,
+    .productos {
+        gap: 10px;
+    }
+
+    .categorias a,
+    .categorias > span {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .titulo-seccion a {
+        font-size: 11px;
+    }
+
+    .tarjeta {
+        padding: 8px;
+    }
+
+    .tarjeta h3 {
+        margin: 8px 0 4px;
+        font-size: 13px;
+    }
+
+    .plataforma {
+        font-size: 11px;
+    }
+
+    .precio {
+        font-size: 20px;
+    }
+
+    .pie {
+        gap: 20px;
+    }
+
+    .informacion,
+    .pie small {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 420px) {
+    .navegacion {
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 14px 0;
+    }
+
+    .navegacion .marca {
+        margin-right: auto;
+    }
+
+    #buscar {
+        order: 1;
+        flex-basis: 100%;
+    }
+
+    .cajaPartida {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cajaPartida img {
+        width: 100%;
+    }
+
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .pie {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 16px 0;
+    }
+
+    .informacion {
+        order: 1;
+        width: 100%;
+    }
+}
