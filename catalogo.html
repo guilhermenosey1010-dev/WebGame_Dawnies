@@ -1,73 +1,262 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Catálogo de juegos | GAME</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="catalogo.css">
-</head>
-<body>
-  <header class="cabecera">
-    <a class="marca" href="#">GAME <span>JUEGOS</span></a>
-    <nav aria-label="Navegación principal">
-      <a href="#categorias">Categorías</a>
-      <span>Ofertas</span>
-      <span>Cesta</span>
-    </nav>
-    <span class="avatar" aria-hidden="true">C</span>
-  </header>
-
-  <main>
-    <section class="catalogo" id="catalogo" aria-labelledby="titulo-catalogo">
-      <aside class="filtros" id="categorias">
-        <h2>Filtros</h2>
-        <a class="seleccionado" data-filtro="todos" href="#todos"><span>Todos</span><small>128</small></a>
-        <a data-filtro="Acción" href="#accion"><span>Acción</span><small>34</small></a>
-        <a data-filtro="Aventura" href="#aventura"><span>Aventura</span><small>28</small></a>
-        <a data-filtro="Deportes" href="#deportes"><span>Deportes</span><small>19</small></a>
-      </aside>
-
-      <div class="juegos" id="todos">
-        <div class="titulo-seccion">
-          <h1 id="titulo-catalogo">Juegos destacados</h1>
-          <a href="#todos">Ver todos <span aria-hidden="true">→</span></a>
-        </div>
-        <div class="rejilla">
-          <article class="tarjeta" data-categoria="Acción">
-            <div class="imagen paisaje" role="img" aria-label="Ilustración de montañas al amanecer"><span>Imagen</span></div>
-            <h2>The Last Hope</h2><p class="plataforma">PS5 · PC</p><p class="precio">59,99 €</p>
-            <a class="boton" href="#todos">Ver ficha</a>
-          </article>
-          <article class="tarjeta" data-categoria="Acción">
-            <div class="imagen neon" role="img" aria-label="Ilustración de luces de neón"><span>Imagen</span></div>
-            <h2>Neon Runners</h2><p class="plataforma">Xbox · PC</p><p class="precio">49,99 €</p>
-            <a class="boton" href="#todos">Ver ficha</a>
-          </article>
-          <article class="tarjeta" data-categoria="Aventura">
-            <div class="imagen bosque" role="img" aria-label="Ilustración de un bosque"><span>Imagen</span></div>
-            <h2>Wild Forest</h2><p class="plataforma">Nintendo Switch</p><p class="precio">44,99 €</p>
-            <a class="boton" href="#todos">Ver fich</a>
-          </article>
-        </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#a70084" />
+    <meta
+      name="description"
+      content="Explora el catálogo GAME por categoría, plataforma y disponibilidad."
+    />
+    <title>Catálogo | GAME</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="catalogo.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-main">
+        <a class="logo" href="index.html" aria-label="GAME, inicio">GAME</a>
+        <label class="search">
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <circle cx="8.5" cy="8.5" r="5.5" />
+            <path d="m13 13 4 4" />
+          </svg>
+          <span class="sr-only">Buscar productos</span>
+          <input
+            id="search"
+            type="search"
+            placeholder="Buscar productos..."
+            autocomplete="off"
+          />
+        </label>
+        <a class="account" href="#cuenta">Mi cuenta</a>
+        <a class="cart" href="#cesta">Cesta <span>(0)</span></a>
       </div>
-    </section>
-  </main>
-<script>
-  const opciones = document.querySelectorAll("[data-filtro]");
-  const juegos = document.querySelectorAll(".tarjeta");
-  opciones.forEach(opcion => opcion.addEventListener("click", evento => {
-    evento.preventDefault();
-    const filtro = opcion.dataset.filtro;
-    opciones.forEach(item => item.classList.remove("seleccionado"));
-    opcion.classList.add("seleccionado");
-    juegos.forEach(juego => { juego.hidden = filtro !== "todos" && juego.dataset.categoria !== filtro; });
-  }));
-</script></body>
+      <nav class="navigation" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a class="active" href="catalogo.html" aria-current="page">Catálogo</a>
+        <a href="#inventario">Inventario</a>
+        <a href="#alta">Alta de producto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-title">
+        <p class="eyebrow">GAME <span>/</span> TIENDA</p>
+        <h1>Catálogo</h1>
+        <p>Encuentra tu próximo juego favorito.</p>
+      </section>
+
+      <nav class="categories" aria-label="Categorías de productos">
+        <button
+          class="category"
+          type="button"
+          data-type="all"
+          aria-pressed="false"
+        >
+          Todos
+        </button>
+        <button
+          class="category active"
+          type="button"
+          data-type="videojuegos"
+          aria-pressed="true"
+        >
+          Videojuegos
+        </button>
+        <button
+          class="category"
+          type="button"
+          data-type="consolas"
+          aria-pressed="false"
+        >
+          Consolas
+        </button>
+        <button
+          class="category"
+          type="button"
+          data-type="accesorios"
+          aria-pressed="false"
+        >
+          Accesorios
+        </button>
+      </nav>
+
+      <section class="catalog-layout" aria-label="Productos del catálogo">
+        <aside class="filters">
+          <h2>Filtrar por</h2>
+          <fieldset>
+            <legend>Plataforma</legend>
+            <label><input type="checkbox" value="PS5" /><span>PS5</span></label>
+            <label
+              ><input type="checkbox" value="Switch" /><span
+                >Switch</span
+              ></label
+            >
+            <label><input type="checkbox" value="PC" /><span>PC</span></label>
+            <label
+              ><input type="checkbox" value="Xbox" /><span>Xbox</span></label
+            >
+          </fieldset>
+          <label class="availability-label" for="availability"
+            >Disponibilidad</label
+          >
+          <select id="availability">
+            <option value="all">Todos</option>
+            <option value="stock">En stock</option>
+            <option value="low">Stock bajo</option>
+            <option value="sold-out">Agotado</option>
+          </select>
+        </aside>
+
+        <div class="products" id="products">
+          <article
+            class="product"
+            data-name="Nova Quest"
+            data-type="videojuegos"
+            data-platform="PS5"
+            data-stock="stock"
+          >
+            <div
+              class="cover cover-nova"
+              role="img"
+              aria-label="Portada geométrica de Nova Quest"
+            >
+              <span class="moon"></span
+              ><span class="mountain mountain-one"></span
+              ><span class="mountain mountain-two"></span>
+              <strong>NOVA QUEST</strong>
+            </div>
+            <div class="product-info">
+              <h2>Nova Quest</h2>
+              <p class="platform">PS5</p>
+              <p class="price">59,99 €</p>
+              <p class="stock in-stock">En stock</p>
+            </div>
+          </article>
+          <article
+            class="product"
+            data-name="Wild Forest"
+            data-type="videojuegos"
+            data-platform="Switch"
+            data-stock="low"
+          >
+            <div
+              class="cover cover-forest"
+              role="img"
+              aria-label="Portada geométrica de Wild Forest"
+            >
+              <span class="moon"></span
+              ><span class="mountain mountain-one"></span
+              ><span class="mountain mountain-two"></span>
+              <strong>WILD FOREST</strong>
+            </div>
+            <div class="product-info">
+              <h2>Wild Forest</h2>
+              <p class="platform">Nintendo Switch</p>
+              <p class="price">44,99 €</p>
+              <p class="stock low-stock">Stock bajo</p>
+            </div>
+          </article>
+          <article
+            class="product"
+            data-name="Neon Run"
+            data-type="videojuegos"
+            data-platform="PC"
+            data-stock="sold-out"
+          >
+            <div
+              class="cover cover-neon"
+              role="img"
+              aria-label="Portada geométrica de Neon Run"
+            >
+              <span class="moon"></span
+              ><span class="mountain mountain-one"></span
+              ><span class="mountain mountain-two"></span>
+              <strong>NEON RUN</strong>
+            </div>
+            <div class="product-info">
+              <h2>Neon Run</h2>
+              <p class="platform">PC</p>
+              <p class="price">39,99 €</p>
+              <p class="stock sold-out">Agotado</p>
+            </div>
+          </article>
+          <p class="empty" id="empty" hidden>
+            No hay productos para estos filtros.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="footer-logo" href="index.html">GAME</a>
+      <nav aria-label="Enlaces del pie de página">
+        <a href="#ayuda">Ayuda</a><a href="#contacto">Contacto</a
+        ><a href="#envios">Envíos</a><a href="#privacidad">Privacidad</a>
+      </nav>
+      <span>© GAME 2026</span>
+    </footer>
+
+    <script>
+      const products = Array.from(document.querySelectorAll(".product"));
+      const categories = Array.from(document.querySelectorAll(".category"));
+      const search = document.getElementById("search");
+      const availability = document.getElementById("availability");
+      const platforms = Array.from(
+        document.querySelectorAll('.filters input[type="checkbox"]'),
+      );
+      let type = "videojuegos";
+
+      function filterProducts() {
+        const query = search.value.trim().toLocaleLowerCase("es");
+        const selectedPlatforms = platforms
+          .filter((input) => input.checked)
+          .map((input) => input.value);
+        let visible = 0;
+        products.forEach((product) => {
+          const matchesType = type === "all" || product.dataset.type === type;
+          const matchesName = product.dataset.name
+            .toLocaleLowerCase("es")
+            .includes(query);
+          const matchesPlatform =
+            selectedPlatforms.length === 0 ||
+            selectedPlatforms.includes(product.dataset.platform);
+          const matchesAvailability =
+            availability.value === "all" ||
+            product.dataset.stock === availability.value;
+          const show =
+            matchesType &&
+            matchesName &&
+            matchesPlatform &&
+            matchesAvailability;
+          product.hidden = !show;
+          if (show) visible++;
+        });
+        document.getElementById("empty").hidden = visible !== 0;
+      }
+
+      categories.forEach((button) =>
+        button.addEventListener("click", () => {
+          type = button.dataset.type;
+          categories.forEach((item) => {
+            const selected = item === button;
+            item.classList.toggle("active", selected);
+            item.setAttribute("aria-pressed", String(selected));
+          });
+          filterProducts();
+        }),
+      );
+      search.addEventListener("input", filterProducts);
+      availability.addEventListener("change", filterProducts);
+      platforms.forEach((input) =>
+        input.addEventListener("change", filterProducts),
+      );
+    </script>
+  </body>
 </html>
-
-
-
-

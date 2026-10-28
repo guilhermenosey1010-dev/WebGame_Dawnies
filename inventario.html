@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventario | GAME</title>
+  <link rel="stylesheet" href="inventario.css">
+</head>
+<body>
+  <header>
+    <div class="navegacion contenedor">
+      <a class="marca" href="index.html" aria-label="GAME, inicio">GAME</a>
+      <input id="buscar" type="search" placeholder="Buscar productos..." aria-label="Buscar productos">
+      <span class="cuenta">Mi cuenta</span>
+      <span class="cesta">Cesta (0)</span>
+    </div>
+    <nav class="barraNav" aria-label="Navegación principal">
+      <div class="contenedor">
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="inventario.html" aria-current="page">Inventario</a>
+        <span aria-disabled="true" title="Próximamente">Alta de producto</span>
+      </div>
+    </nav>
+  </header>
+  <main class="contenedor content">
+      <div class="title-row">
+        <h1>Inventario</h1>
+        <button class="add-button" type="button">＋ Añadir producto</button>
+      </div>
+
+      <section class="summary" aria-label="Resumen del inventario">
+        <article class="summary-card">
+          <span>Productos</span>
+          <strong>5</strong>
+        </article>
+        <article class="summary-card">
+          <span>Unidades</span>
+          <strong>47</strong>
+        </article>
+        <article class="summary-card">
+          <span>Stock bajo</span>
+          <strong>2</strong>
+        </article>
+      </section>
+
+      <section class="inventory" aria-label="Productos en inventario">
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Categoría</th>
+                <th scope="col">Plataforma</th>
+                <th scope="col">Unidades</th>
+                <th scope="col">Ubicación</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr tabindex="0">
+                <td>G001</td>
+                <td>Nova Quest</td>
+                <td>Videojuegos</td>
+                <td>PS5</td>
+                <td>12</td>
+                <td>A-01</td>
+              </tr>
+              <tr tabindex="0">
+                <td>G002</td>
+                <td>Wild Forest</td>
+                <td>Videojuegos</td>
+                <td>Switch</td>
+                <td class="low-stock">3</td>
+                <td>A-02</td>
+              </tr>
+              <tr tabindex="0">
+                <td>G003</td>
+                <td>Neon Run</td>
+                <td>Videojuegos</td>
+                <td>PC</td>
+                <td class="low-stock">0</td>
+                <td>A-03</td>
+              </tr>
+              <tr tabindex="0">
+                <td>C004</td>
+                <td>Consola PS5</td>
+                <td>Consolas</td>
+                <td>PS5</td>
+                <td>8</td>
+                <td>B-01</td>
+              </tr>
+              <tr tabindex="0">
+                <td>A005</td>
+                <td>Mando inalámbrico</td>
+                <td>Accesorios</td>
+                <td>PC</td>
+                <td>24</td>
+                <td>C-01</td>
+              </tr>
+              <tr tabindex="0">
+                <td>G004</td>
+       º         <td>Persona 5</td>
+                <td>Videojuegos</td>
+                <td>PS5</td>
+                <td class="low-stock">0</td>
+                <td>A-04</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-caption">
+          <span>Mostrando 5 productos</span>
+          <nav class="pagination" aria-label="Paginación del inventario">
+            <button type="button" aria-label="Página anterior">‹</button>
+            <button class="current-page" type="button" aria-current="page" aria-label="Página 1">1</button>
+            <button type="button" aria-label="Página siguiente">›</button>
+          </nav>
+        </div>
+      </section>
+  </main>
+  <footer>
+    <div class="pie contenedor">
+      <a class="marca" href="index.html">GAME</a>
+      <div class="informacion">
+        <span>Ayuda</span>
+        <span>Contacto</span>
+        <span>Envíos</span>
+        <span>Privacidad</span>
+      </div>
+      <small>© GAME 2026</small>
+    </div>
+  </footer>
+</body>
+</html>
