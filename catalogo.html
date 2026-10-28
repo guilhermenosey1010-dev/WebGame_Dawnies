@@ -9,13 +9,7 @@
       content="Explora el catálogo GAME por categoría, plataforma y disponibilidad."
     />
     <title>Catálogo | GAME</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/comun.css">
+<link rel="stylesheet" href="css/comun.css">
     <link rel="stylesheet" href="css/catalogo.css" />
     <link rel="stylesheet" href="css/header.css" />
   </head>
@@ -37,14 +31,14 @@
       </nav>
     </header>
 
-    <main>
+    <main class="contenedor">
       <section class="page-title">
-        <p class="eyebrow">GAME <span>/</span> TIENDA</p>
+        <p class="etiqueta">NUESTROS JUEGOS</p>
         <h1>Catálogo</h1>
         <p>Encuentra tu próximo juego favorito.</p>
       </section>
 
-      <nav class="categories" aria-label="Categorías de productos">
+      <nav class="categorias categories" aria-label="Categorías de productos">
         <button
           class="category"
           type="button"
@@ -95,104 +89,55 @@
               ><input type="checkbox" value="Xbox" /><span>Xbox</span></label
             >
           </fieldset>
-          <label class="availability-label" for="availability"
-            >Disponibilidad</label
-          >
-          <select id="availability">
-            <option value="all">Todos</option>
-            <option value="stock">En stock</option>
-            <option value="low">Stock bajo</option>
-            <option value="sold-out">Agotado</option>
-          </select>
+          <div class="filtro-disponibilidad">
+            <label class="availability-label" for="availability">Disponibilidad</label>
+            <select id="availability">
+              <option value="all">Todos</option>
+              <option value="stock">En stock</option>
+              <option value="low">Stock bajo</option>
+              <option value="sold-out">Agotado</option>
+            </select>
+          </div>
         </aside>
 
-        <div class="products" id="products">
-          <article
-            class="product"
-            data-name="Nova Quest"
-            data-type="videojuegos"
-            data-platform="PS5"
-            data-stock="stock"
-          >
-            <div
-              class="cover cover-nova"
-              role="img"
-              aria-label="Portada geométrica de Nova Quest"
-            >
-              <span class="moon"></span
-              ><span class="mountain mountain-one"></span
-              ><span class="mountain mountain-two"></span>
-              <strong>NOVA QUEST</strong>
-            </div>
-            <div class="product-info">
-              <h2>Nova Quest</h2>
-              <p class="platform">PS5</p>
-              <p class="price">59,99 €</p>
-              <p class="stock in-stock">En stock</p>
-            </div>
+        <div class="productos products" id="products">
+          <article class="tarjeta product" data-name="Wolverine" data-type="videojuegos" data-platform="PS5" data-stock="stock">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ39zCNlmW43tVyxfC65mg12EAJp0KULtCnlZDzJzHMekqVgnQAb12nnQTn&s=10" alt="" width="300" height="112">
+            <h3>Wolverine</h3>
+            <p class="plataforma">PS5</p>
+            <p class="precio">79,99 €</p>
+            <p class="stock in-stock">En stock</p>
           </article>
-          <article
-            class="product"
-            data-name="Wild Forest"
-            data-type="videojuegos"
-            data-platform="Switch"
-            data-stock="low"
-          >
-            <div
-              class="cover cover-forest"
-              role="img"
-              aria-label="Portada geométrica de Wild Forest"
-            >
-              <span class="moon"></span
-              ><span class="mountain mountain-one"></span
-              ><span class="mountain mountain-two"></span>
-              <strong>WILD FOREST</strong>
-            </div>
-            <div class="product-info">
-              <h2>Wild Forest</h2>
-              <p class="platform">Nintendo Switch</p>
-              <p class="price">44,99 €</p>
-              <p class="stock low-stock">Stock bajo</p>
-            </div>
+          <article class="tarjeta product" data-name="Outer Wilds" data-type="videojuegos" data-platform="Switch" data-stock="low">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThG6wrPHqIXqzpbgFW5ZC4_H40RCqfhkyj99rMjltQ6C7hPobE-y4vmpc5&s=10" alt="" width="300" height="112">
+            <h3>Outer Wilds</h3>
+            <p class="plataforma">Nintendo Switch</p>
+            <p class="precio">22,99 €</p>
+            <p class="stock low-stock">Stock bajo</p>
           </article>
-          <article
-            class="product"
-            data-name="Neon Run"
-            data-type="videojuegos"
-            data-platform="PC"
-            data-stock="sold-out"
-          >
-            <div
-              class="cover cover-neon"
-              role="img"
-              aria-label="Portada geométrica de Neon Run"
-            >
-              <span class="moon"></span
-              ><span class="mountain mountain-one"></span
-              ><span class="mountain mountain-two"></span>
-              <strong>NEON RUN</strong>
-            </div>
-            <div class="product-info">
-              <h2>Neon Run</h2>
-              <p class="platform">PC</p>
-              <p class="price">39,99 €</p>
-              <p class="stock sold-out">Agotado</p>
-            </div>
+          <article class="tarjeta product" data-name="Shrek 3 remastered" data-type="videojuegos" data-platform="PC" data-stock="sold-out">
+            <img src="https://www.nintenderos.com/wp-content/uploads/2026/10/shrek-2-remastered.jpg" alt="" width="300" height="112">
+            <h3>Shrek 3 remastered</h3>
+            <p class="plataforma">PC</p>
+            <p class="precio">39,99 €</p>
+            <p class="stock sold-out">Agotado</p>
           </article>
-          <p class="empty" id="empty" hidden>
-            No hay productos para estos filtros.
-          </p>
+          <p class="empty" id="empty" hidden>No hay productos para estos filtros.</p>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <a class="footer-logo" href="index.html">GAME</a>
-      <nav aria-label="Enlaces del pie de página">
-        <a href="#ayuda">Ayuda</a><a href="#contacto">Contacto</a
-        ><a href="#envios">Envíos</a><a href="#privacidad">Privacidad</a>
-      </nav>
-      <span>© GAME 2026</span>
+    <footer>
+        <div class="pie contenedor">
+            <a class="marca" href="index.html">GAME</a>
+            <div class="informacion">
+                <span>Ayuda</span>
+                <span>Contacto</span>
+                <span>Envíos</span>
+                <span>Privacidad</span>
+            </div>
+            <small>© DAWNIES 2026</small>
+        </div>
     </footer>
 
     <script src="js/catalogo.js"></script>
