@@ -28,17 +28,17 @@
   <main class="contenedor content">
       <div class="title-row">
         <h1>Inventario</h1>
-        <a class="add-button" href="alta.html">＋ Añadir producto</a>
+        <a class="boton add-button" href="alta.html">＋ Añadir producto</a>
       </div>
 
       <section class="summary" aria-label="Resumen del inventario">
         <article class="summary-card">
           <span>Productos</span>
-          <strong>5</strong>
+          <strong>3</strong>
         </article>
         <article class="summary-card">
           <span>Unidades</span>
-          <strong>47</strong>
+          <strong>15</strong>
         </article>
         <article class="summary-card">
           <span>Stock bajo</span>
@@ -55,6 +55,7 @@
                 <th scope="col">Producto</th>
                 <th scope="col">Categoría</th>
                 <th scope="col">Plataforma</th>
+                <th scope="col">Precio</th>
                 <th scope="col">Unidades</th>
                 <th scope="col">Ubicación</th>
               </tr>
@@ -62,57 +63,51 @@
             <tbody>
               <tr tabindex="0">
                 <td>G001</td>
-                <td>Nova Quest</td>
+                <td>
+                  <div class="producto-inventario">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ39zCNlmW43tVyxfC65mg12EAJp0KULtCnlZDzJzHMekqVgnQAb12nnQTn&s=10" alt="" width="96" height="36">
+                    <span>Wolverine</span>
+                  </div>
+                </td>
                 <td>Videojuegos</td>
                 <td>PS5</td>
+                <td class="precio-inventario">79,99 €</td>
                 <td>12</td>
                 <td>A-01</td>
               </tr>
               <tr tabindex="0">
                 <td>G002</td>
-                <td>Wild Forest</td>
+                <td>
+                  <div class="producto-inventario">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThG6wrPHqIXqzpbgFW5ZC4_H40RCqfhkyj99rMjltQ6C7hPobE-y4vmpc5&s=10" alt="" width="96" height="36">
+                    <span>Outer Wilds</span>
+                  </div>
+                </td>
                 <td>Videojuegos</td>
-                <td>Switch</td>
+                <td>Nintendo Switch</td>
+                <td class="precio-inventario">22,99 €</td>
                 <td class="low-stock">3</td>
                 <td>A-02</td>
               </tr>
               <tr tabindex="0">
                 <td>G003</td>
-                <td>Neon Run</td>
+                <td>
+                  <div class="producto-inventario">
+                    <img src="https://www.nintenderos.com/wp-content/uploads/2026/10/shrek-2-remastered.jpg" alt="" width="96" height="36">
+                    <span>Shrek 3 remastered</span>
+                  </div>
+                </td>
                 <td>Videojuegos</td>
                 <td>PC</td>
+                <td class="precio-inventario">39,99 €</td>
                 <td class="low-stock">0</td>
                 <td>A-03</td>
-              </tr>
-              <tr tabindex="0">
-                <td>C004</td>
-                <td>Consola PS5</td>
-                <td>Consolas</td>
-                <td>PS5</td>
-                <td>8</td>
-                <td>B-01</td>
-              </tr>
-              <tr tabindex="0">
-                <td>A005</td>
-                <td>Mando inalámbrico</td>
-                <td>Accesorios</td>
-                <td>PC</td>
-                <td>24</td>
-                <td>C-01</td>
-              </tr>
-              <tr tabindex="0">
-                <td>G004</td>
-       º         <td>Persona 5</td>
-                <td>Videojuegos</td>
-                <td>PS5</td>
-                <td class="low-stock">0</td>
-                <td>A-04</td>
               </tr>
             </tbody>
           </table>
         </div>
         <div class="table-caption">
-          <span>Mostrando 5 productos</span>
+          <span>Mostrando 3 productos</span>
           <nav class="pagination" aria-label="Paginación del inventario">
             <button type="button" aria-label="Página anterior">‹</button>
             <button class="current-page" type="button" aria-current="page" aria-label="Página 1">1</button>
@@ -121,17 +116,17 @@
         </div>
       </section>
   </main>
-  <footer>
-    <div class="pie contenedor">
-      <a class="marca" href="index.html">GAME</a>
-      <div class="informacion">
-        <span>Ayuda</span>
-        <span>Contacto</span>
-        <span>Envíos</span>
-        <span>Privacidad</span>
-      </div>
-      <small>© GAME 2026</small>
-    </div>
-  </footer>
+    <footer>
+        <div class="pie contenedor">
+            <a class="marca" href="index.html">GAME</a>
+            <div class="informacion">
+                <span>Ayuda</span>
+                <span>Contacto</span>
+                <span>Envíos</span>
+                <span>Privacidad</span>
+            </div>
+            <small>© DAWNIES 2026</small>
+        </div>
+    </footer>
 </body>
 </html>
