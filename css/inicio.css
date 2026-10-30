@@ -10,8 +10,11 @@
 }
 
 .cajaPartida img {
+    flex-shrink: 0;
     width: 37%;
     height: auto;
+    aspect-ratio: 300 / 156;
+    object-fit: cover;
     border-radius: 5px;
 }
 
