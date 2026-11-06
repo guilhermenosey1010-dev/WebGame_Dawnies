@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de consolas | GAME</title>
+    <link rel="stylesheet" href="css/comun.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/catalogo.css">
+</head>
+<body class="pagina-catalogo">
+    <header class="cabecera">
+        <div class="navegacion contenedor">
+            <a class="marca" href="index.html" aria-label="GAME, inicio">GAME</a>
+            <input id="buscar" type="search" placeholder="Buscar productos..." aria-label="Buscar productos">
+            <span class="cuenta">Mi cuenta</span>
+            <span class="cesta">Cesta (0)</span>
+        </div>
+        <nav class="barra-nav" aria-label="Navegación principal">
+            <div class="contenedor">
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html" aria-current="page">Catálogo</a>
+                <a href="inventario.html">Inventario</a>
+                <a href="alta.html">Alta de producto</a>
+            </div>
+        </nav>
+    </header>
+    <main class="contenedor">
+        <section class="encabezado-catalogo" aria-labelledby="titulo-catalogo">
+            <p class="etiqueta">NUESTRO CATÁLOGO</p>
+            <h1 id="titulo-catalogo">Catálogo de consolas</h1>
+            <p>Elige dónde jugar tu próxima partida.</p>
+        </section>
+        <nav class="categorias" aria-label="Categorías de productos">
+            <a href="catalogo.html">Videojuegos</a>
+            <a href="consolas.html" aria-current="page">Consolas</a>
+            <a href="accesorios.html">Accesorios</a>
+        </nav>
+        <section aria-labelledby="titulo-productos">
+            <h2 id="titulo-productos">Consolas disponibles</h2>
+            <div class="productos">
+                <article class="tarjeta">
+                    <img src="img/ps5.svg" alt="PlayStation 5" width="300" height="112">
+                    <h3>PlayStation 5</h3>
+                    <p class="plataforma">PS5</p>
+                    <p class="precio">499,99 €</p>
+                    <p class="etiqueta-stock estado-disponible">En stock</p>
+                </article>
+                <article class="tarjeta">
+                    <img src="img/switch.svg" alt="Nintendo Switch" width="300" height="112">
+                    <h3>Nintendo Switch</h3>
+                    <p class="plataforma">Nintendo Switch</p>
+                    <p class="precio">279,99 €</p>
+                    <p class="etiqueta-stock estado-bajo">Stock bajo</p>
+                </article>
+                <article class="tarjeta">
+                    <img src="img/xbox.svg" alt="Xbox Series S" width="300" height="112">
+                    <h3>Xbox Series S</h3>
+                    <p class="plataforma">Xbox Series S</p>
+                    <p class="precio">299,99 €</p>
+                    <p class="etiqueta-stock estado-agotado">Agotado</p>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="pie contenedor">
+            <a class="marca" href="index.html">GAME</a>
+            <div class="informacion">
+                <span>Ayuda</span>
+                <span>Contacto</span>
+                <span>Envíos</span>
+                <span>Privacidad</span>
+            </div>
+            <small>© DAWNIES 2026</small>
+        </div>
+    </footer>
+</body>
+</html>

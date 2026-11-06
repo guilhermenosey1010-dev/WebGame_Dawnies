@@ -1,121 +1,146 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inventario | GAME</title>
-  <link rel="stylesheet" href="css/comun.css">
-  <link rel="stylesheet" href="css/inventario.css">
-  <link rel="stylesheet" href="css/header.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario | GAME</title>
+    <link rel="stylesheet" href="css/comun.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/inventario.css">
 </head>
 <body>
-  <header class="cabecera">
-    <div class="navegacion contenedor">
-      <a class="marca" href="index.html" aria-label="GAME, inicio">GAME</a>
-      <input id="buscar" type="search" placeholder="Buscar productos..." aria-label="Buscar productos">
-      <span class="cuenta">Mi cuenta</span>
-      <span class="cesta">Cesta (0)</span>
-    </div>
-    <nav class="barraNav" aria-label="Navegación principal">
-      <div class="contenedor">
-        <a href="index.html">Inicio</a>
-        <a href="catalogo.html">Catálogo</a>
-        <a href="inventario.html" aria-current="page">Inventario</a>
-        <a href="alta.html">Alta de producto</a>
-      </div>
-    </nav>
-  </header>
-  <main class="contenedor content">
-      <div class="title-row">
-        <h1>Inventario</h1>
-        <a class="boton add-button" href="alta.html">＋ Añadir producto</a>
-      </div>
-
-      <section class="summary" aria-label="Resumen del inventario">
-        <article class="summary-card">
-          <span>Productos</span>
-          <strong>3</strong>
-        </article>
-        <article class="summary-card">
-          <span>Unidades</span>
-          <strong>15</strong>
-        </article>
-        <article class="summary-card">
-          <span>Stock bajo</span>
-          <strong>2</strong>
-        </article>
-      </section>
-
-      <section class="inventory" aria-label="Productos en inventario">
-        <div class="table-scroll">
-          <table>
-            <thead>
-              <tr>
-                <th scope="col">Código</th>
-                <th scope="col">Producto</th>
-                <th scope="col">Categoría</th>
-                <th scope="col">Plataforma</th>
-                <th scope="col">Precio</th>
-                <th scope="col">Unidades</th>
-                <th scope="col">Ubicación</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr tabindex="0">
-                <td>G001</td>
-                <td>
-                  <div class="producto-inventario">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ39zCNlmW43tVyxfC65mg12EAJp0KULtCnlZDzJzHMekqVgnQAb12nnQTn&s=10" alt="" width="96" height="36">
-                    <span>Wolverine</span>
-                  </div>
-                </td>
-                <td>Videojuegos</td>
-                <td>PS5</td>
-                <td class="precio-inventario">79,99 €</td>
-                <td>12</td>
-                <td>A-01</td>
-              </tr>
-              <tr tabindex="0">
-                <td>G002</td>
-                <td>
-                  <div class="producto-inventario">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThG6wrPHqIXqzpbgFW5ZC4_H40RCqfhkyj99rMjltQ6C7hPobE-y4vmpc5&s=10" alt="" width="96" height="36">
-                    <span>Outer Wilds</span>
-                  </div>
-                </td>
-                <td>Videojuegos</td>
-                <td>Nintendo Switch</td>
-                <td class="precio-inventario">22,99 €</td>
-                <td class="low-stock">3</td>
-                <td>A-02</td>
-              </tr>
-              <tr tabindex="0">
-                <td>G003</td>
-                <td>
-                  <div class="producto-inventario">
-                    <img src="https://www.nintenderos.com/wp-content/uploads/2026/10/shrek-2-remastered.jpg" alt="" width="96" height="36">
-                    <span>Shrek 3 remastered</span>
-                  </div>
-                </td>
-                <td>Videojuegos</td>
-                <td>PC</td>
-                <td class="precio-inventario">39,99 €</td>
-                <td class="low-stock">0</td>
-                <td>A-03</td>
-              </tr>
-            </tbody>
-          </table>
+    <header class="cabecera">
+        <div class="navegacion contenedor">
+            <a class="marca" href="index.html" aria-label="GAME, inicio">GAME</a>
+            <input id="buscar" type="search" placeholder="Buscar productos..." aria-label="Buscar productos">
+            <span class="cuenta">Mi cuenta</span>
+            <span class="cesta">Cesta (0)</span>
         </div>
-        <div class="table-caption">
-          <span>Mostrando 3 productos</span>
-          <nav class="pagination" aria-label="Paginación del inventario">
-            <button type="button" aria-label="Página anterior">‹</button>
-            <button class="current-page" type="button" aria-current="page" aria-label="Página 1">1</button>
-            <button type="button" aria-label="Página siguiente">›</button>
-          </nav>
+        <nav class="barra-nav" aria-label="Navegación principal">
+            <div class="contenedor">
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="inventario.html" aria-current="page">Inventario</a>
+                <a href="alta.html">Alta de producto</a>
+            </div>
+        </nav>
+    </header>
+    <main class="contenedor">
+        <div class="fila-titulo">
+            <h1>Inventario</h1>
+            <a class="boton" href="alta.html"><span aria-hidden="true">＋</span> Añadir producto</a>
         </div>
-      </section>
-  </main>
+        <section aria-labelledby="titulo-resumen">
+            <h2 id="titulo-resumen" class="solo-lectores">Resumen del inventario</h2>
+            <div class="resumen">
+                <article class="tarjeta-resumen"><h3>Productos</h3><strong>9</strong></article>
+                <article class="tarjeta-resumen"><h3>Unidades</h3><strong>34</strong></article>
+                <article class="tarjeta-resumen"><h3>Stock bajo</h3><strong>3</strong></article>
+            </div>
+        </section>
+        <section class="inventario" aria-labelledby="titulo-inventario">
+            <h2 id="titulo-inventario">Stock de almacén</h2>
+            <div class="tabla-scroll" tabindex="0" role="region" aria-labelledby="titulo-inventario">
+                <table>
+                    <caption>9 productos. Stock bajo: de 1 a 3 unidades.</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Código</th>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Categoría</th>
+                            <th scope="col">Plataforma</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Unidades</th>
+                            <th scope="col">Ubicación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>G001</td>
+                            <td><div class="producto-inventario"><img src="img/wolverine.jpg" alt="" width="96" height="36"><span>Wolverine</span></div></td>
+                            <td>Videojuegos</td>
+                            <td>PS5</td>
+                            <td class="precio-inventario">79,99 €</td>
+                            <td>12</td>
+                            <td>A-01</td>
+                        </tr>
+                        <tr>
+                            <td>G002</td>
+                            <td><div class="producto-inventario"><img src="img/outer-wilds.jpg" alt="" width="96" height="36"><span>Outer Wilds</span></div></td>
+                            <td>Videojuegos</td>
+                            <td>Nintendo Switch</td>
+                            <td class="precio-inventario">22,99 €</td>
+                            <td class="unidades-bajas">3</td>
+                            <td>A-02</td>
+                        </tr>
+                        <tr>
+                            <td>G003</td>
+                            <td><div class="producto-inventario"><img src="img/shrek.jpg" alt="" width="96" height="36"><span>Shrek 3 remastered</span></div></td>
+                            <td>Videojuegos</td>
+                            <td>PC</td>
+                            <td class="precio-inventario">39,99 €</td>
+                            <td class="unidades-agotadas">0</td>
+                            <td>A-03</td>
+                        </tr>
+                        <tr>
+                            <td>C001</td>
+                            <td><div class="producto-inventario"><img src="img/ps5.svg" alt="" width="96" height="36"><span>PlayStation 5</span></div></td>
+                            <td>Consolas</td>
+                            <td>PS5</td>
+                            <td class="precio-inventario">499,99 €</td>
+                            <td>6</td>
+                            <td>B-01</td>
+                        </tr>
+                        <tr>
+                            <td>C002</td>
+                            <td><div class="producto-inventario"><img src="img/switch.svg" alt="" width="96" height="36"><span>Nintendo Switch</span></div></td>
+                            <td>Consolas</td>
+                            <td>Nintendo Switch</td>
+                            <td class="precio-inventario">279,99 €</td>
+                            <td class="unidades-bajas">2</td>
+                            <td>B-02</td>
+                        </tr>
+                        <tr>
+                            <td>C003</td>
+                            <td><div class="producto-inventario"><img src="img/xbox.svg" alt="" width="96" height="36"><span>Xbox Series S</span></div></td>
+                            <td>Consolas</td>
+                            <td>Xbox Series S</td>
+                            <td class="precio-inventario">299,99 €</td>
+                            <td class="unidades-agotadas">0</td>
+                            <td>B-03</td>
+                        </tr>
+                        <tr>
+                            <td>A001</td>
+                            <td><div class="producto-inventario"><img src="img/mando.svg" alt="" width="96" height="36"><span>Mando DualSense</span></div></td>
+                            <td>Accesorios</td>
+                            <td>PS5</td>
+                            <td class="precio-inventario">59,99 €</td>
+                            <td>8</td>
+                            <td>C-01</td>
+                        </tr>
+                        <tr>
+                            <td>A002</td>
+                            <td><div class="producto-inventario"><img src="img/auriculares.svg" alt="" width="96" height="36"><span>Auriculares gaming</span></div></td>
+                            <td>Accesorios</td>
+                            <td>Multiplataforma</td>
+                            <td class="precio-inventario">34,99 €</td>
+                            <td class="unidades-bajas">3</td>
+                            <td>C-02</td>
+                        </tr>
+                        <tr>
+                            <td>A003</td>
+                            <td><div class="producto-inventario"><img src="img/teclado.svg" alt="" width="96" height="36"><span>Teclado mecánico</span></div></td>
+                            <td>Accesorios</td>
+                            <td>PC</td>
+                            <td class="precio-inventario">49,99 €</td>
+                            <td class="unidades-agotadas">0</td>
+                            <td>C-03</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
     <footer>
         <div class="pie contenedor">
             <a class="marca" href="index.html">GAME</a>

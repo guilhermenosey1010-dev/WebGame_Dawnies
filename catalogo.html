@@ -1,132 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#a70084" />
-    <meta
-      name="description"
-      content="Explora el catálogo GAME por categoría, plataforma y disponibilidad."
-    />
-    <title>Catálogo | GAME</title>
-<link rel="stylesheet" href="css/comun.css">
-    <link rel="stylesheet" href="css/catalogo.css" />
-    <link rel="stylesheet" href="css/header.css" />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de videojuegos | GAME</title>
+    <link rel="stylesheet" href="css/comun.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/catalogo.css">
+</head>
+<body class="pagina-catalogo">
     <header class="cabecera">
-      <div class="navegacion contenedor">
-        <a class="marca" href="index.html" aria-label="GAME, inicio">GAME</a>
-        <input id="buscar" type="search" placeholder="Buscar productos..." aria-label="Buscar productos">
-        <span class="cuenta">Mi cuenta</span>
-        <span class="cesta">Cesta (0)</span>
-      </div>
-      <nav class="barraNav" aria-label="Navegación principal">
-        <div class="contenedor">
-          <a href="index.html">Inicio</a>
-          <a href="catalogo.html" aria-current="page">Catálogo</a>
-          <a href="inventario.html">Inventario</a>
-          <a href="alta.html">Alta de producto</a>
+        <div class="navegacion contenedor">
+            <a class="marca" href="index.html" aria-label="GAME, inicio">GAME</a>
+            <input id="buscar" type="search" placeholder="Buscar productos..." aria-label="Buscar productos">
+            <span class="cuenta">Mi cuenta</span>
+            <span class="cesta">Cesta (0)</span>
         </div>
-      </nav>
+        <nav class="barra-nav" aria-label="Navegación principal">
+            <div class="contenedor">
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html" aria-current="page">Catálogo</a>
+                <a href="inventario.html">Inventario</a>
+                <a href="alta.html">Alta de producto</a>
+            </div>
+        </nav>
     </header>
-
     <main class="contenedor">
-      <section class="page-title">
-        <p class="etiqueta">NUESTROS JUEGOS</p>
-        <h1>Catálogo</h1>
-        <p>Encuentra tu próximo juego favorito.</p>
-      </section>
-
-      <nav class="categorias categories" aria-label="Categorías de productos">
-        <button
-          class="category"
-          type="button"
-          data-type="all"
-          aria-pressed="false"
-        >
-          Todos
-        </button>
-        <button
-          class="category active"
-          type="button"
-          data-type="videojuegos"
-          aria-pressed="true"
-        >
-          Videojuegos
-        </button>
-        <button
-          class="category"
-          type="button"
-          data-type="consolas"
-          aria-pressed="false"
-        >
-          Consolas
-        </button>
-        <button
-          class="category"
-          type="button"
-          data-type="accesorios"
-          aria-pressed="false"
-        >
-          Accesorios
-        </button>
-      </nav>
-
-      <section class="catalog-layout" aria-label="Productos del catálogo">
-        <aside class="filters">
-          <h2>Filtrar por</h2>
-          <fieldset>
-            <legend>Plataforma</legend>
-            <label><input type="checkbox" value="PS5" /><span>PS5</span></label>
-            <label
-              ><input type="checkbox" value="Switch" /><span
-                >Switch</span
-              ></label
-            >
-            <label><input type="checkbox" value="PC" /><span>PC</span></label>
-            <label
-              ><input type="checkbox" value="Xbox" /><span>Xbox</span></label
-            >
-          </fieldset>
-          <div class="filtro-disponibilidad">
-            <label class="availability-label" for="availability">Disponibilidad</label>
-            <select id="availability">
-              <option value="all">Todos</option>
-              <option value="stock">En stock</option>
-              <option value="low">Stock bajo</option>
-              <option value="sold-out">Agotado</option>
-            </select>
-          </div>
-        </aside>
-
-        <div class="productos products" id="products">
-          <article class="tarjeta product" data-name="Wolverine" data-type="videojuegos" data-platform="PS5" data-stock="stock">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ39zCNlmW43tVyxfC65mg12EAJp0KULtCnlZDzJzHMekqVgnQAb12nnQTn&s=10" alt="" width="300" height="112">
-            <h3>Wolverine</h3>
-            <p class="plataforma">PS5</p>
-            <p class="precio">79,99 €</p>
-            <p class="stock in-stock">En stock</p>
-          </article>
-          <article class="tarjeta product" data-name="Outer Wilds" data-type="videojuegos" data-platform="Switch" data-stock="low">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThG6wrPHqIXqzpbgFW5ZC4_H40RCqfhkyj99rMjltQ6C7hPobE-y4vmpc5&s=10" alt="" width="300" height="112">
-            <h3>Outer Wilds</h3>
-            <p class="plataforma">Nintendo Switch</p>
-            <p class="precio">22,99 €</p>
-            <p class="stock low-stock">Stock bajo</p>
-          </article>
-          <article class="tarjeta product" data-name="Shrek 3 remastered" data-type="videojuegos" data-platform="PC" data-stock="sold-out">
-            <img src="https://www.nintenderos.com/wp-content/uploads/2026/10/shrek-2-remastered.jpg" alt="" width="300" height="112">
-            <h3>Shrek 3 remastered</h3>
-            <p class="plataforma">PC</p>
-            <p class="precio">39,99 €</p>
-            <p class="stock sold-out">Agotado</p>
-          </article>
-          <p class="empty" id="empty" hidden>No hay productos para estos filtros.</p>
-        </div>
-      </section>
+        <section class="encabezado-catalogo" aria-labelledby="titulo-catalogo">
+            <p class="etiqueta">NUESTRO CATÁLOGO</p>
+            <h1 id="titulo-catalogo">Catálogo de videojuegos</h1>
+            <p>Encuentra tu próximo juego favorito.</p>
+        </section>
+        <nav class="categorias" aria-label="Categorías de productos">
+            <a href="catalogo.html" aria-current="page">Videojuegos</a>
+            <a href="consolas.html">Consolas</a>
+            <a href="accesorios.html">Accesorios</a>
+        </nav>
+        <section aria-labelledby="titulo-productos">
+            <h2 id="titulo-productos">Videojuegos disponibles</h2>
+            <div class="productos">
+                <article class="tarjeta">
+                    <img src="img/wolverine.jpg" alt="Wolverine" width="300" height="112">
+                    <h3>Wolverine</h3>
+                    <p class="plataforma">PS5</p>
+                    <p class="precio">79,99 €</p>
+                    <p class="etiqueta-stock estado-disponible">En stock</p>
+                </article>
+                <article class="tarjeta" id="oferta-outer-wilds">
+                    <img src="img/outer-wilds.jpg" alt="Outer Wilds" width="300" height="112">
+                    <h3>Outer Wilds</h3>
+                    <p class="plataforma">Nintendo Switch</p>
+                    <p class="etiqueta-oferta">Oferta</p>
+                    <p class="precio"><del class="precio-anterior">29,99 €</del> 22,99 €</p>
+                    <p class="etiqueta-stock estado-bajo">Stock bajo</p>
+                </article>
+                <article class="tarjeta">
+                    <img src="img/shrek.jpg" alt="Shrek 3 remastered" width="300" height="112">
+                    <h3>Shrek 3 remastered</h3>
+                    <p class="plataforma">PC</p>
+                    <p class="precio">39,99 €</p>
+                    <p class="etiqueta-stock estado-agotado">Agotado</p>
+                </article>
+            </div>
+        </section>
     </main>
-
     <footer>
         <div class="pie contenedor">
             <a class="marca" href="index.html">GAME</a>
@@ -139,7 +76,5 @@
             <small>© DAWNIES 2026</small>
         </div>
     </footer>
-
-    <script src="js/catalogo.js"></script>
-  </body>
+</body>
 </html>

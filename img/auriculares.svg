@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 112">
+    <rect width="300" height="112" fill="#252143"/>
+    <path d="M113 63V51A37 37 0 0 1 187 51V63" fill="none" stroke="#f7f7fa" stroke-width="9"/>
+    <rect x="103" y="51" width="23" height="39" rx="8" fill="#f29bd6"/>
+    <rect x="174" y="51" width="23" height="39" rx="8" fill="#f29bd6"/>
+    <path d="M186 86 172 97H156" fill="none" stroke="#f7f7fa" stroke-width="4"/>
+    <text x="12" y="107" fill="white" font-family="Arial, sans-serif" font-size="14">AURICULARES GAMING</text>
+</svg>

@@ -1,128 +1,90 @@
-/* Cabecera compartida por todas las páginas, basada en Inicio e Inventario. */
+/* Cabecera y menú compartidos. Base móvil;
+una fila en pantallas grandes. */
 .cabecera {
     flex-shrink: 0;
-    color: #595b60;
-    background: #fff;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: normal;
+    background: var(--color-superficie);
 }
 
-.cabecera .contenedor {
-    width: calc(100% - 48px);
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.cabecera .navegacion {
+.navegacion {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 40px;
-    min-height: 80px;
+    gap: var(--espacio-md);
+    padding: var(--espacio-md) 0;
 }
 
-.cabecera a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.cabecera a:hover {
-    color: #b00089;
-}
-
-.cabecera a:focus-visible,
-.cabecera input:focus-visible {
-    outline: 2px solid #b00089;
-    outline-offset: 4px;
-}
-
-.cabecera .marca {
-    color: #b00089;
-    font-size: 36px;
+.navegacion .marca {
+    margin-right: auto;
+    color: var(--color-principal);
+    font-size: 1.75rem;
     font-weight: bold;
 }
 
-.cabecera #buscar {
-    flex: 1;
+#buscar {
+    order: 1;
+    flex: 1 1 100%;
     min-width: 0;
-    padding: 12px 16px;
+    min-height: 2.75rem;
+    padding: var(--espacio-sm) var(--espacio-md);
     border: 0;
-    border-radius: 5px;
-    background: #f7f7fa;
+    border-radius: var(--radio);
     color: inherit;
-    font: inherit;
-    font-size: 13px;
+    background: var(--color-fondo);
+    font-size: var(--tam-pequeno);
 }
 
-.cabecera .cuenta,
-.cabecera .cesta {
+.cuenta, .cesta {
     white-space: nowrap;
-    font-size: 13px;
+    font-size: var(--tam-pequeno);
 }
 
-.cabecera .barraNav {
-    border-top: 1px solid #eeeef4;
-    border-bottom: 1px solid #e3e3ec;
+.barra-nav {
+    border-top: 1px solid var(--color-borde);
+    border-bottom: 1px solid var(--color-borde);
 }
 
-.cabecera .barraNav .contenedor {
+.barra-nav .contenedor {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.cabecera .barraNav a {
-    padding: 14px 0;
-    font-size: 14px;
+.barra-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 50%;
+    min-height: 2.75rem;
+    padding: var(--espacio-sm);
+    border-bottom: 3px solid transparent;
+    font-size: 0.875rem;
 }
 
-.cabecera .barraNav [aria-current="page"] {
-    border-bottom: 3px solid #b00089;
-    color: #b00089;
+.barra-nav [aria-current="page"] {
+    border-bottom-color: var(--color-principal);
+    color: var(--color-principal);
 }
 
-@media (max-width: 650px) {
-    .cabecera .contenedor {
-        width: calc(100% - 30px);
+@media (min-width: 40.625rem) {
+    .navegacion {
+        flex-wrap: nowrap;
+        gap: var(--espacio-xxl);
+        min-height: 5rem;
+        padding: 0;
     }
 
-    .cabecera .navegacion {
-        gap: 20px;
-        min-height: 60px;
+    .navegacion .marca {
+        margin-right: 0;
+        font-size: 2.25rem;
     }
 
-    .cabecera .marca {
-        font-size: 28px;
+    #buscar {
+        order: 0;
+        flex-basis: auto;
     }
 
-    .cabecera #buscar {
-        padding: 10px;
-        font-size: 11px;
+    .barra-nav a {
+        flex-basis: 25%;
     }
 
-    .cabecera .cuenta,
-    .cabecera .cesta {
-        font-size: 10px;
-    }
-
-    .cabecera .barraNav a {
-        padding: 10px 0;
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 420px) {
-    .cabecera .navegacion {
-        flex-wrap: wrap;
-        gap: 16px;
-        padding: 14px 0;
-    }
-
-    .cabecera .navegacion .marca {
-        margin-right: auto;
-    }
-
-    .cabecera #buscar {
-        order: 1;
-        flex-basis: 100%;
-    }
 }

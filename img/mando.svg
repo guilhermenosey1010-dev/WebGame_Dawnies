@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 112">
+    <rect width="300" height="112" fill="#402547"/>
+    <path d="M117 25H183Q199 25 205 45L215 81Q217 94 204 91L179 71H121L96 91Q83 94 85 81L95 45Q101 25 117 25Z" fill="#f7f7fa"/>
+    <rect x="132" y="30" width="36" height="24" rx="5" fill="#b00089"/>
+    <path d="M108 42V62 M98 52H118" stroke="#595b60" stroke-width="5"/>
+    <circle cx="187" cy="43" r="4" fill="#b6658c"/>
+    <circle cx="197" cy="53" r="4" fill="#b6658c"/>
+    <circle cx="177" cy="53" r="4" fill="#b6658c"/>
+    <circle cx="187" cy="63" r="4" fill="#b6658c"/>
+    <text x="12" y="105" fill="white" font-family="Arial, sans-serif" font-size="14">MANDO DUALSENSE</text>
+</svg>

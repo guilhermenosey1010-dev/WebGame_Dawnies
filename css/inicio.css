@@ -1,37 +1,36 @@
-/* Banner de la página de Inicio. El resto del diseño está en comun.css. */
-.cajaPartida {
+/* Banner de novedades: apilado en móvil y en dos columnas en escritorio. */
+.caja-partida {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 24px;
-    padding: 20px 28px;
-    border-radius: 8px;
-    background: #fbeaf7;
+    flex-direction: column;
+    gap: var(--espacio-md);
+    padding: var(--espacio-md);
+    border-radius: var(--radio);
+    background: var(--color-secundario);
 }
 
-.cajaPartida img {
+.caja-partida h1 span {
+    color: var(--color-principal);
+}
+
+.caja-partida img {
     flex-shrink: 0;
-    width: 37%;
-    height: auto;
+    width: 100%;
     aspect-ratio: 300 / 156;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: var(--radio);
 }
 
-@media (max-width: 650px) {
-    .cajaPartida {
-        gap: 12px;
-        padding: 16px 20px;
-    }
-}
-
-@media (max-width: 420px) {
-    .cajaPartida {
-        flex-direction: column;
-        align-items: stretch;
+@media (min-width: 40.625rem) {
+    .caja-partida {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--espacio-lg);
+        padding: var(--espacio-lg);
     }
 
-    .cajaPartida img {
-        width: 100%;
+    .caja-partida img {
+        width: 37%;
     }
+
 }

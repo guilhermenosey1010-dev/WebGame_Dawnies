@@ -1,165 +1,26 @@
-/* El catálogo comparte las tarjetas, colores y tipografía de Inicio. */
-.page-title {
-    margin-bottom: 16px;
-}
-
-.page-title > p:last-child {
-    margin: 0;
-}
-
-.categories {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.category {
-    color: inherit;
-    text-align: left;
-    cursor: pointer;
-}
-
-.catalog-layout {
+/* Maquetación general de las tres páginas de catálogo mediante áreas Grid. */
+.pagina-catalogo {
     display: grid;
-    grid-template-columns: 180px minmax(0, 1fr);
-    align-items: start;
-    gap: 14px;
-    margin-bottom: 8px;
+    grid-template-areas: "cabecera" "contenido" "pie";
+    grid-template-rows: auto 1fr auto;
 }
 
-.filters {
-    padding: 16px;
-    border: 1px solid #e3e3ec;
-    border-radius: 7px;
-    background: white;
-    font-size: 13px;
+.pagina-catalogo > .cabecera {
+    grid-area: cabecera;
 }
 
-.filters h2 {
-    margin-bottom: 14px;
-    font-size: 16px;
+.pagina-catalogo > main {
+    grid-area: contenido;
 }
 
-.filters fieldset {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 14px;
-    min-width: 0;
+.pagina-catalogo > footer {
+    grid-area: pie;
+}
+
+.encabezado-catalogo {
+    margin-bottom: var(--espacio-md);
+}
+
+.encabezado-catalogo p:last-child {
     margin: 0;
-    padding: 0;
-    border: 0;
-}
-
-.filters legend {
-    width: 100%;
-    margin-bottom: 12px;
-    font-weight: bold;
-}
-
-.filters fieldset label {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    cursor: pointer;
-}
-
-.filters input {
-    margin: 0;
-    accent-color: #b00089;
-}
-
-.filtro-disponibilidad {
-    min-width: 0;
-    margin-top: 20px;
-}
-
-.availability-label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.filters select {
-    width: 100%;
-    min-height: 38px;
-    padding: 8px;
-    border: 1px solid #e3e3ec;
-    border-radius: 5px;
-    color: inherit;
-    background: white;
-    font-size: 13px;
-}
-
-.products {
-    min-width: 0;
-    align-content: start;
-}
-
-.stock {
-    display: inline-block;
-    margin: 10px 0 0;
-    padding: 4px 10px;
-    border-radius: 5px;
-    font-size: 12px;
-}
-
-.in-stock {
-    color: #287a42;
-    background: #eaf5ec;
-}
-
-.low-stock {
-    color: #b00089;
-    background: #fbeaf7;
-}
-
-.sold-out {
-    color: #76767e;
-    background: #f7f7fa;
-}
-
-.empty {
-    grid-column: 1 / -1;
-    margin: 0;
-    padding: 24px;
-    border: 1px solid #e3e3ec;
-    border-radius: 7px;
-    background: white;
-    text-align: center;
-}
-
-@media (max-width: 900px) {
-    .catalog-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .filters {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px 24px;
-    }
-
-    .filters h2 {
-        grid-column: 1 / -1;
-        margin: 0;
-    }
-
-    .filtro-disponibilidad {
-        margin: 0;
-    }
-}
-
-@media (max-width: 650px) {
-    .categories {
-        gap: 8px;
-    }
-
-    .categorias button {
-        padding: 10px 8px;
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 420px) {
-    .filters {
-        grid-template-columns: 1fr;
-    }
 }

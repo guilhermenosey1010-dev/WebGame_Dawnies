@@ -1,44 +1,42 @@
-/* Formulario con los colores, botones y márgenes de Inicio. */
 .descripcion-alta {
-    margin: 0 0 20px;
+    margin-bottom: var(--espacio-lg);
 }
 
 .formulario-alta {
-    padding: 20px;
-    border: 1px solid #e3e3ec;
-    border-radius: 7px;
-    background: white;
+    padding: var(--espacio-md);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    background: var(--color-superficie);
 }
 
 .campos-alta {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: var(--espacio-lg);
 }
 
 .campo-alta {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: var(--espacio-sm);
     min-width: 0;
 }
 
 .campo-alta label {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: bold;
 }
 
-.campo-alta input,
-.campo-alta select {
+.campo-alta input, .campo-alta select {
     width: 100%;
     min-width: 0;
-    min-height: 44px;
-    padding: 12px 16px;
-    border: 1px solid #e3e3ec;
-    border-radius: 5px;
+    min-height: 2.75rem;
+    padding: var(--espacio-sm) var(--espacio-md);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
     color: inherit;
-    background: white;
-    font-size: 14px;
+    background: var(--color-superficie);
+    font-size: 0.875rem;
 }
 
 .campo-alta input[type="file"] {
@@ -46,12 +44,12 @@
 }
 
 .campo-alta input[type="file"]::file-selector-button {
-    min-height: 42px;
-    margin-right: 12px;
-    padding: 0 16px;
+    min-height: 2.75rem;
+    margin-right: var(--espacio-sm);
+    padding: 0 var(--espacio-md);
     border: 0;
     color: inherit;
-    background: #f7f7fa;
+    background: var(--color-fondo);
     font: inherit;
     cursor: pointer;
 }
@@ -60,44 +58,33 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 12px;
-    margin-top: 24px;
-    padding-top: 16px;
-    border-top: 1px solid #e3e3ec;
-}
-
-.boton-secundario {
-    border: 1px solid #e3e3ec;
-    color: #595b60;
-    background: white;
-}
-
-.boton-secundario:hover {
-    color: #b00089;
-    background: #fbeaf7;
+    gap: var(--espacio-md);
+    margin-top: var(--espacio-lg);
+    padding-top: var(--espacio-md);
+    border-top: 1px solid var(--color-borde);
 }
 
 .mensaje-guardado {
     display: none;
-    margin: 16px 0 0;
-    padding: 16px;
-    border: 1px solid #287a42;
-    border-radius: 5px;
-    color: #287a42;
-    background: #eaf5ec;
+    margin: var(--espacio-md) 0 0;
+    padding: var(--espacio-md);
+    border: 1px solid var(--color-exito);
+    border-radius: var(--radio);
+    color: var(--color-exito);
+    background: var(--color-exito-fondo);
 }
 
 .mensaje-guardado:target {
     display: block;
 }
 
-@media (max-width: 650px) {
+@media (min-width: 40.625rem) {
     .formulario-alta {
-        padding: 16px;
+        padding: var(--espacio-lg);
     }
 
     .campos-alta {
-        grid-template-columns: 1fr;
-        gap: 16px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
 }

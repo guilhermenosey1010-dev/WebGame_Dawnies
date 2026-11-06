@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 112">
+    <rect width="300" height="112" fill="#252143"/>
+    <path d="M119 12 133 8 133 97 119 101Z M166 8 181 12 181 101 166 97Z" fill="#f7f7fa"/>
+    <path d="M133 10H166V99H133Z" fill="#565372"/>
+    <path d="M136 10V97 M163 10V97" stroke="#b57cea" stroke-width="3"/>
+    <text x="12" y="99" fill="white" font-family="Arial, sans-serif" font-size="14">PLAYSTATION 5</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 112">
+    <rect width="300" height="112" fill="#194d45"/>
+    <rect x="79" y="16" width="142" height="77" rx="12" fill="#252143"/>
+    <rect x="96" y="23" width="108" height="63" rx="3" fill="#519b88"/>
+    <path d="M79 28Q79 16 91 16V93Q79 93 79 81Z" fill="#65d5ef"/>
+    <path d="M209 16Q221 16 221 28V81Q221 93 209 93Z" fill="#fa795b"/>
+    <circle cx="85" cy="40" r="4" fill="#252143"/>
+    <circle cx="215" cy="67" r="4" fill="#252143"/>
+    <text x="12" y="105" fill="white" font-family="Arial, sans-serif" font-size="14">NINTENDO SWITCH</text>
+</svg>
