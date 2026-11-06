@@ -48,7 +48,7 @@ La paleta principal sigue siendo magenta, blanco y gris. Éxito, aviso y error t
 
 ## Presentación
 
-[Descargar la presentación en PowerPoint](presentacion/Presentacion_GAME_Dawnies.pptx).
+[Descargar la presentación en PowerPoint](presentacion/Presentacion_GAME_Dawnies.pptx). También está disponible públicamente en https://webgame-dawnies.vercel.app/presentacion.pptx.
 
 Contiene 12 diapositivas, capturas de la web y notas para la exposición. La última diapositiva incluye el enlace pulsable a la página publicada en Vercel.
 
@@ -69,3 +69,7 @@ Contiene 12 diapositivas, capturas de la web y notas para la exposición. La úl
 - Ocho anchos comprobados, de 320 a 1280 píxeles, sin desbordamiento horizontal de la página y con botones principales de al menos 44 píxeles de alto.
 - Comprobadas las categorías, la validación del formulario, el aviso de guardado y la preferencia de reducir movimiento.
 - Estas comprobaciones de navegador no sustituyen la prueba física en el Realme del profesor.
+
+## PDF de entrega
+
+[Descargar el PDF con todos los enlaces](output/pdf/Entrega_GAME_Dawnies.pdf). Incluye la web publicada, el repositorio, la descarga pública del PowerPoint, la guía de estilo en Figma y accesos directos a las seis páginas.
