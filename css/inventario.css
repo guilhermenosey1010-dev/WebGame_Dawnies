@@ -90,6 +90,7 @@ tbody tr:hover {
 
 .producto-inventario {
     display: flex;
+    min-width: max-content;
     align-items: center;
     gap: var(--espacio-sm);
 }
