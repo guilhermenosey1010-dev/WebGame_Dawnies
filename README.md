@@ -8,10 +8,11 @@ Guilherme, Luka, Johnattan y Oier.
 
 ## Web y repositorio
 
-- Web en GitHub Pages: https://guilhermenosey1010-dev.github.io/WebGame_Dawnies/
+- Web publicada en Vercel: https://webgame-dawnies.vercel.app
+- Dirección alternativa de GitHub Pages: https://guilhermenosey1010-dev.github.io/WebGame_Dawnies/
 - Repositorio: https://github.com/guilhermenosey1010-dev/WebGame_Dawnies
 
-La dirección de Pages todavía devuelve 404. Para publicar, subir el commit a GitHub y entrar en **Settings → Pages → Deploy from a branch → main → / (root) → Save**. Esperar a que termine el despliegue y comprobar el enlace anterior.
+La web ya está publicada en Vercel. GitHub Pages sigue pendiente. Para publicarla también allí, subir el commit a GitHub y entrar en **Settings → Pages → Deploy from a branch → main → / (root) → Save**. Esperar a que termine el despliegue y comprobar el enlace anterior.
 
 Para verla en local basta con abrir **index.html**. No hay que instalar dependencias.
 
@@ -44,6 +45,12 @@ La miniguía de estilo se entrega como documento separado.
 | Iconos | Símbolos de texto: ＋ significa añadir producto y → significa ir al catálogo; no se usa una librería externa. |
 
 La paleta principal sigue siendo magenta, blanco y gris. Éxito, aviso y error tienen color y texto propios. El contraste, la proximidad, la alineación y la jerarquía de títulos se mantienen en todas las páginas.
+
+## Presentación
+
+[Descargar la presentación en PowerPoint](presentacion/Presentacion_GAME_Dawnies.pptx).
+
+Contiene 12 diapositivas, capturas de la web y notas para la exposición. La última diapositiva incluye el enlace pulsable a la página publicada en Vercel.
 
 ## Preparación de la entrega del grupo
 
