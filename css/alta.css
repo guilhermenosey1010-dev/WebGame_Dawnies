@@ -77,6 +77,20 @@
     background: #fbeaf7;
 }
 
+.mensaje-guardado {
+    display: none;
+    margin: 16px 0 0;
+    padding: 16px;
+    border: 1px solid #287a42;
+    border-radius: 5px;
+    color: #287a42;
+    background: #eaf5ec;
+}
+
+.mensaje-guardado:target {
+    display: block;
+}
+
 @media (max-width: 650px) {
     .formulario-alta {
         padding: 16px;
